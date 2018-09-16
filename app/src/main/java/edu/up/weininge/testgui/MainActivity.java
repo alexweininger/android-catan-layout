@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
 
 
-    // this is branch niraj
+    // this is branch master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
