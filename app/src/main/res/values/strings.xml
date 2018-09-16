@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TestGUI</string>
+
+
+
+        <string name="build">Build</string>
+        <string name="developmentCards">Development Cards</string>
+        <string name="trade">Trade</string>
+        <string name="resources">Resources</string>
+
+        <string name="road">Road</string>
+        <string name="settlement">Settlement</string>
+        <string name="city">City</string>
+
+        <string name="ore">Ore</string>
+        <string name="grain">Grain</string>
+        <string name="lumber">Lumber</string>
+        <string name="wool">Wool</string>
+        <string name="brick">Brick</string>
+
+        <string name="playerName">PlayerName</string>
+        <string name="victoryPoints">Victory Points</string>
+        <string name="roll">Roll</string>
+        <string name="endTurn">End Turn</string>
+
+
+</resources>
