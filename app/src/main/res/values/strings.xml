@@ -2,6 +2,7 @@
     <string name="app_name">TestGUI</string>
 
         <string name="scoreboard">Scoreboard</string>
+    <string name="menu">Menu</string>
 
         <string name="build">Build</string>
         <string name="developmentCards">Development Cards</string>
