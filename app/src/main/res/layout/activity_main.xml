@@ -52,7 +52,7 @@
         android:layout_height="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/build"
+        android:text="@string/heading_build"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="14sp"
@@ -73,7 +73,7 @@
         android:layout_height="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/trade"
+        android:text="@string/heading_buildtrade"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="14sp"
@@ -109,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.86" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <TextView
         android:id="@+id/heading_resources"
@@ -117,7 +117,7 @@
         android:layout_height="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/resources"
+        android:text="@string/heading_resources"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="14sp"
@@ -152,7 +152,7 @@
         android:layout_height="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/playerName"
+        android:text="@string/heading_playerName"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="14sp"
@@ -277,11 +277,12 @@
 
     <TextView
         android:id="@+id/label_grain"
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_width="46dp"
+        android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/grain"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/label_ore" />
 
@@ -331,7 +332,7 @@
         android:id="@+id/button_development"
         android:layout_width="0dp"
         android:layout_height="37dp"
-        android:text="Development"
+        android:text="@string/developmentCards"
         app:layout_constraintEnd_toEndOf="@+id/button_city"
         app:layout_constraintStart_toStartOf="@+id/button_city"
         app:layout_constraintTop_toBottomOf="@+id/button_city" />
@@ -341,7 +342,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.29" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline14"
@@ -356,7 +357,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Game"
+        android:text="@string/heading_game"
         android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintHorizontal_bias="0.0"
