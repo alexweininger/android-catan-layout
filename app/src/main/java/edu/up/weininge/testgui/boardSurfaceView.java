@@ -16,6 +16,7 @@ public class boardSurfaceView extends SurfaceView {
     }
 
     public void draw(Canvas canvas) {
+        
         super.draw(canvas);
 
         Rect rect = new Rect(10, 10, 40, 40);

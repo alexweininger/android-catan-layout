@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
 
 
-    // this is branch master
+    //ANDREW LANG
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
