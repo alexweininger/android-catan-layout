@@ -1,28 +1,36 @@
 <resources>
-    <string name="app_name">TestGUI</string>
+    <string name="app_name">Settlers of Catan</string>
 
-        <string name="scoreboard">Scoreboard</string>
-    <string name="menu">Menu</string>
-
-        <string name="build">Build</string>
-        <string name="developmentCards">Development Cards</string>
-        <string name="trade">Trade</string>
-        <string name="resources">Resources</string>
-
+    <string name="heading_build">Build</string>
         <string name="road">Road</string>
         <string name="settlement">Settlement</string>
         <string name="city">City</string>
 
+    <string name="heading_playerName">PlayerName</string>
+        <string name="victoryPoints">Victory Points</string>
+        <string name="roll">Roll</string>
+        <string name="endTurn">End Turn</string>
+
+    <string name="heading_trade">Trade</string>
+        <string name="trade">Trade</string>
+
+    <string name="heading_resources">Resources</string>
         <string name="ore">Ore</string>
         <string name="grain">Grain</string>
         <string name="lumber">Lumber</string>
         <string name="wool">Wool</string>
         <string name="brick">Brick</string>
 
-        <string name="playerName">PlayerName</string>
-        <string name="victoryPoints">Victory Points</string>
-        <string name="roll">Roll</string>
-        <string name="endTurn">End Turn</string>
+    <string name="heading_name">Game</string>
+        <string name="scoreboard">Scoreboard</string>
+        <string name="menu">Menu</string>
+
+    <!--resources-->
+
+        <string name="developmentCards">Development Cards</string>
+
+
+
 
 
 </resources>
