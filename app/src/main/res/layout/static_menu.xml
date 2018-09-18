@@ -447,9 +447,10 @@
     <edu.up.weininge.testgui.boardSurfaceView
         android:id="@+id/boardSurfaceView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toTopOf="@+id/top_buildmenu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="parent" />
 
