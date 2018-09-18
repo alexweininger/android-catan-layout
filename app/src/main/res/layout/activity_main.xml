@@ -73,7 +73,7 @@
         android:layout_height="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/heading_buildtrade"
+        android:text="@string/heading_trade"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="14sp"
@@ -372,5 +372,14 @@
         app:layout_constraintEnd_toEndOf="@+id/button_scoreboard"
         app:layout_constraintStart_toStartOf="@+id/button_scoreboard"
         app:layout_constraintTop_toBottomOf="@+id/button_scoreboard" />
+
+    <edu.up.weininge.testgui.boardSurfaceView
+        android:id="@+id/boardSurfaceView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -19,7 +19,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/resources"
+        android:text="Resorces"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 

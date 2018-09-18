@@ -5,26 +5,24 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.util.AttributeSet;
 import android.view.SurfaceView;
 
 public class boardSurfaceView extends SurfaceView{
 
-    public boardSurfaceView(Context context) {
-        super(context);
-
-
+    public boardSurfaceView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        setWillNotDraw(false);
     }
 
-    public void draw(Canvas canvas) {
-        super.draw(canvas);
+    protected void onDraw(Canvas canvas) {
 
-        Rect rect = new Rect(10, 10, 40, 40);
-        Paint redRect = new Paint();
+        super.onDraw(canvas);
 
-        canvas.drawRect(rect, redRect);
-
-        invalidate();
-
+        Paint redPaint = new Paint();
+        redPaint.setStyle(Paint.Style.FILL);
+        redPaint.setColor(Color.RED);
+        canvas.drawCircle(100f, 100f, 100f, redPaint);
     }
 
 }
