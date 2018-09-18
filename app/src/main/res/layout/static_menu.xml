@@ -6,6 +6,75 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="89dp">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/right_buildmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_buildmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="410dp" />
+
+    <TextView
+        android:id="@+id/dropText"
+        android:layout_width="783dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="end|center"
+        android:text="Would you like to make this trade?"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
+        app:layout_constraintStart_toStartOf="@+id/left_buildmenu"
+        app:layout_constraintTop_toTopOf="@+id/top_buildmenu" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="97dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@android:string/cancel"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
+        app:layout_constraintEnd_toStartOf="@+id/right_buildmenu"
+        app:layout_constraintTop_toTopOf="@+id/top_buildmenu"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="97dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginTop="4dp"
+        android:text="@android:string/ok"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
+        app:layout_constraintEnd_toStartOf="@+id/right_buildmenu"
+        app:layout_constraintTop_toTopOf="@+id/top_buildmenu"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_buildmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_buildmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+
     <Button
         android:id="@+id/button_city"
         android:layout_width="0dp"
@@ -15,7 +84,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/city"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/top_buildmenu_alex"
         app:layout_constraintTop_toBottomOf="@+id/heading_build" />
 
     <Button
@@ -35,7 +104,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/road"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/top_buildmenu_alex"
         app:layout_constraintStart_toStartOf="@+id/heading_build"
         app:layout_constraintTop_toBottomOf="@+id/heading_build" />
 
@@ -322,7 +391,7 @@
         app:layout_constraintGuide_begin="20dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/top_buildmenu_alex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
