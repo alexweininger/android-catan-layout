@@ -1,4 +1,4 @@
-package edu.up.weininge.catan;
+package edu.up.weininge.testgui;
 
 import android.content.Context;
 import android.graphics.Canvas;

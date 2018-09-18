@@ -373,7 +373,7 @@
         app:layout_constraintStart_toStartOf="@+id/button_scoreboard"
         app:layout_constraintTop_toBottomOf="@+id/button_scoreboard" />
 
-    <edu.up.weininge.catan.boardSurfaceView
+    <edu.up.weininge.testgui.boardSurfaceView
         android:id="@+id/boardSurfaceView"
         android:layout_width="0dp"
         android:layout_height="0dp"
