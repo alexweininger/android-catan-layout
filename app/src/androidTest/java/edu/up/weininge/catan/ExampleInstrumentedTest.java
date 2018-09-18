@@ -1,4 +1,4 @@
-package edu.up.weininge.testgui;
+package edu.up.weininge.catan;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

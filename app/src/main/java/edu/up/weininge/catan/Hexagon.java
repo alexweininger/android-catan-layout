@@ -1,11 +1,10 @@
-package edu.up.weininge.testgui;
+package edu.up.weininge.catan;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.util.AttributeSet;
 
 public class Hexagon extends boardSurfaceView {
 

@@ -1,11 +1,10 @@
-package edu.up.weininge.testgui;
+package edu.up.weininge.catan;
 
 import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.SurfaceView;
 
-import java.util.ArrayList;
+import edu.up.weininge.testgui.R;
 
 public class MainActivity extends AppCompatActivity {
 

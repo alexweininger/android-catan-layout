@@ -1,10 +1,9 @@
-package edu.up.weininge.testgui;
+package edu.up.weininge.catan;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
 
