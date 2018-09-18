@@ -22,6 +22,8 @@
         <string name="victoryPoints">Victory Points</string>
         <string name="roll">Roll</string>
         <string name="endTurn">End Turn</string>
+        <string name="cancel">Cancel</string>
+        <string name="ok">OK</string>
 
 
 </resources>
