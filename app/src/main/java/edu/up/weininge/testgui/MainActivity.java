@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         Canvas canvas = new Canvas();
 
-
         gameBoardSurfaceView.draw(canvas);
 
     }
