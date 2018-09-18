@@ -8,7 +8,7 @@ import android.graphics.Rect;
 import android.view.SurfaceView;
 
 public class boardSurfaceView extends SurfaceView {
-    
+
 
     public boardSurfaceView(Context context) {
         super(context);
