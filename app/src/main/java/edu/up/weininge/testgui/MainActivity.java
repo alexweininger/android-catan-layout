@@ -33,10 +33,11 @@ public class MainActivity extends AppCompatActivity {
         gameBoardSurfaceView.draw(canvas);
 
         //Spinner
+        /*
         Spinner developmentSpinner = (Spinner) findViewById(R.id.development_Card_Spinner);
         ArrayAdapter<CharSequence> developmentChoices = ArrayAdapter.createFromResource(this,R.array.resource_Card, android.R.layout.simple_spinner_item);
         developmentChoices.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        developmentSpinner.setAdapter(developmentChoices);
+        developmentSpinner.setAdapter(developmentChoices);*/
 
     }
 }
