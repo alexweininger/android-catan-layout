@@ -18,29 +18,28 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="410dp" />
+        app:layout_constraintGuide_percent="0.6497623" />
 
     <TextView
         android:id="@+id/dropText"
-        android:layout_width="783dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="end|center"
         android:text="Would you like to make this trade?"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
+        app:layout_constraintBottom_toBottomOf="@+id/okButton"
+        app:layout_constraintEnd_toStartOf="@+id/okButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/left_buildmenu"
-        app:layout_constraintTop_toTopOf="@+id/top_buildmenu" />
+        app:layout_constraintTop_toTopOf="@+id/okButton" />
 
     <Button
         android:id="@+id/cancelButton"
         android:layout_width="97dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
         android:text="@android:string/cancel"
         app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
         app:layout_constraintEnd_toStartOf="@+id/right_buildmenu"
@@ -50,15 +49,13 @@
     <Button
         android:id="@+id/okButton"
         android:layout_width="97dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
         android:text="@android:string/ok"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
-        app:layout_constraintEnd_toStartOf="@+id/right_buildmenu"
-        app:layout_constraintTop_toTopOf="@+id/top_buildmenu"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintBottom_toBottomOf="@+id/cancelButton"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+        app:layout_constraintTop_toTopOf="@+id/cancelButton"
+        app:layout_constraintVertical_bias="0.125" />
 
     <android.support.constraint.Guideline
         android:id="@+id/bottom_buildmenu"
