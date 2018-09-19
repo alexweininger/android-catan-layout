@@ -26,11 +26,6 @@ public class boardSurfaceView extends SurfaceView{
 
         super.onDraw(canvas);
 
-        Paint redPaint = new Paint();
-        redPaint.setStyle(Paint.Style.FILL);
-        redPaint.setColor(Color.RED);
-        canvas.drawCircle(100f, 100f, 100f, redPaint);
-
         ArrayList<Hexagon> hexagons = new ArrayList<Hexagon>();
 
         hexagons.add(new Hexagon(this.getContext(), 100, 100));

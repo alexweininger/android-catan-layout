@@ -19,8 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
         Canvas canvas = new Canvas();
 
+//        Button buildMenuButton
+
 
         board.draw(canvas);
+
+        /*
+        need to create listeners for every single button
+         */
 
         //Spinner
         /*
