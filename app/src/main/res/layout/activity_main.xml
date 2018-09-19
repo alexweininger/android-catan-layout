@@ -13,44 +13,23 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.03" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/right_guidline_trading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.97" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/top_guideline_trading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/bottom_guidline_trading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
-
     <TextView
         android:id="@+id/menu_header"
         android:layout_width="200dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Trading Menu"
         android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline_trading"
-        app:layout_constraintTop_toTopOf="@+id/top_guideline_trading" />
+        app:layout_constraintBottom_toTopOf="@+id/seperator_guideline_trading"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_trading" />
 
     <android.support.constraint.Guideline
         android:id="@+id/seperator_guideline_trading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_begin="95dp" />
 
     <ImageButton
         android:id="@+id/sheep_want_icon"
