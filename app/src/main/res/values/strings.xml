@@ -25,6 +25,45 @@
     <string name="scoreboard">Scoreboard</string>
     <string name="menu">Menu</string>
 
+    <string name="Player1">Player 1</string>
+    <string name="Player2">Player 2</string>
+    <string name="Player3">Player 3</string>
+    <string name="Player4">Player 4</string>
+
+    <string name="Player1_Score">0</string>
+    <string name = "Player2_Score">4</string>
+    <string name = "Player3_Score">2</string>
+    <string name = "Player4_Score">8</string>
+
+    <string name = "Trading_Menu">Trading Menu</string>
+    <string name = "you_Want">You Want:</string>
+    <string name = "you_Give">You Give:</string>
+
+    <string name = "sheep_you_give_amount">0</string>
+    <string name = "sheep_you_want_amount">2</string>
+    <string name = "wood_you_give_amount">1</string>
+    <string name = "wood_you_want_amount">2</string>
+    <string name = "ore_you_give_amount">1</string>
+    <string name = "ore_you_want_amount">1</string>
+    <string name = "grain_you_give_amount">0</string>
+    <string name = "grain_you_want_amount">0</string>
+    <string name = "brick_you_give_amount">1</string>
+    <string name = "brick_you_want_amount">0</string>
+
+    <string name = "Use_Button">Use Card</string>
+
+    <string name = "development_Card_Info">Development Card Info</string>
+    <string name = "development_Card_Name">Development Card Name</string>
+    <string name = "development_Card_Spinner">Development Card Selection</string>
+
+    <string name = "value_lumber">0</string>
+    <string name = "value_wool">0</string>
+    <string name = "value_brick">0</string>
+    <string name = "value_grain">0</string>
+    <string name = "value_ore">0</string>
+
+
+
     <!--resources-->
 
     <string name="developmentCards">Development Cards</string>
