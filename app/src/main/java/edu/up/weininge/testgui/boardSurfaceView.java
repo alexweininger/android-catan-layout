@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class boardSurfaceView extends SurfaceView{
 
+
     public boardSurfaceView(Context context) {
         super(context);
         setWillNotDraw(false);
