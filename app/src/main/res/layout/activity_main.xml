@@ -5,6 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--
+    Updated with groups.  A group is just a way to hide / show a group of views.  So I (Alex) added groups for each menu.
+    All groups but the static bottom menu group are set to GONE.
+    -->
+
     <!--scoreboard group-->
     <android.support.constraint.Group
         android:id="@+id/group_scoreboard"
@@ -22,7 +27,6 @@
         app:constraint_referenced_ids="development_Card_Name,development_Card_Info,use_Card,development_Card_Spinner" />
 
     <!-- build menu group -->
-
     <android.support.constraint.Group
         android:id="@+id/group_build_menu"
         android:layout_width="wrap_content"
@@ -30,6 +34,7 @@
         android:visibility="gone"
         app:constraint_referenced_ids="dropText,cancelButton,okButton" />
 
+    <!-- static bottom menu START -->
 
     <Button
         android:id="@+id/button_city"
@@ -398,6 +403,10 @@
         app:layout_constraintStart_toStartOf="@+id/button_scoreboard"
         app:layout_constraintTop_toBottomOf="@+id/button_scoreboard" />
 
+    <!-- static bottom menu END -->
+
+    <!--build menu START-->
+
     <android.support.constraint.Guideline
         android:id="@+id/right_buildmenu"
         android:layout_width="wrap_content"
@@ -465,6 +474,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.0" />
+
+    <!-- build menu END -->
+
+    <!--dev card menu START-->
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_middle_dc_layout"
@@ -544,6 +557,10 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline_bottom_border_dc_layout"
         app:layout_constraintEnd_toEndOf="@+id/development_Card_Info"
         app:layout_constraintStart_toStartOf="@+id/development_Card_Name" />
+
+    <!--dev card menu END-->
+
+    <!--scoreboard START-->
 
     <TextView
         android:id="@+id/victory_Points"
@@ -647,6 +664,7 @@
         app:layout_constraintStart_toEndOf="@+id/Player4_Name"
         app:layout_constraintTop_toBottomOf="@+id/Player3_Score" />
 
+    <!-- scoreboard END -->
 
     <!-- trade menu START -->
 
