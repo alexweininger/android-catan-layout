@@ -5,6 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--scoreboard group-->
+    <android.support.constraint.Group
+        android:id="@+id/group_scoreboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="you_want_text,Player1_Name,Player1_Score,Player2_Score,victory_Points,Player4_Name,Player3_Name,Player2_Name,Player3_Score,Player4_Score" />
+
+    <!--dev card group-->
+    <android.support.constraint.Group
+        android:id="@+id/group_development_card_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="development_Card_Name,development_Card_Info,use_Card,development_Card_Spinner" />
+
+    <!-- build menu group -->
+
+    <android.support.constraint.Group
+        android:id="@+id/group_build_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="dropText,cancelButton,okButton" />
+
 
     <Button
         android:id="@+id/button_city"
@@ -163,7 +188,7 @@
     <TextView
         android:id="@+id/label_ore"
         android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/ore"
@@ -289,7 +314,7 @@
     <TextView
         android:id="@+id/label_lumber"
         android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/lumber"
@@ -299,7 +324,7 @@
     <TextView
         android:id="@+id/label_wool"
         android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginTop="8dp"
         android:text="@string/wool"
         app:layout_constraintStart_toStartOf="@+id/label_lumber"
@@ -308,7 +333,7 @@
     <TextView
         android:id="@+id/label_brick"
         android:layout_width="48dp"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginTop="8dp"
         android:text="@string/brick"
         app:layout_constraintStart_toStartOf="@+id/label_wool"
@@ -385,7 +410,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="410dp" />
+        app:layout_constraintGuide_percent="0.73" />
 
     <TextView
         android:id="@+id/dropText"
@@ -432,7 +457,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.76" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <android.support.constraint.Guideline
         android:id="@+id/left_buildmenu"
@@ -628,9 +653,9 @@
     <android.support.constraint.Guideline
         android:id="@+id/left_guideline_trading"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.03" />
+        app:layout_constraintGuide_begin="31dp" />
 
     <TextView
         android:id="@+id/menu_header"
@@ -648,7 +673,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="95dp" />
+        app:layout_constraintGuide_begin="119dp" />
 
     <ImageButton
         android:id="@+id/sheep_want_icon"
@@ -1061,6 +1086,30 @@
         android:textSize="40sp"
         app:layout_constraintStart_toEndOf="@+id/brick_want_minus"
         app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_bottom_static_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="628dp"
+        android:layout_marginEnd="1023dp"
+        android:layout_marginTop="3dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="label_grain,heading_trade,value_ore,button_settlement,value_victoryPoints,button_trade,heading_game,button_city,label_wool,button_menu,heading_playerName,value_lumber,value_brick,value_grain,label_victoryPoints,value_wool,button_scoreboard,label_brick,button_road,button_development,button_roll,label_ore,button_endTurn,heading_resources,heading_build,label_lumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--trade menu group-->
+    <android.support.constraint.Group
+        android:id="@+id/group_trade_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ore_want_minus,brick_give_add,grain_give_icon,wood_give_add,sheep_want_minus,ore_give_minus,brick_give_icon,sheep_give_add,wood_want_icon,brick_give_amount,ore_want_icon,wood_give_icon,grain_want_amount,grain_want_minus,sheep_want_add,ore_give_add,wood_give_minus,wood_want_add,ore_want_add,brick_want_minus,grain_give_amount,sheep_want_icon,ore_give_icon,sheep_give_icon,sheep_give_minus,wood_want_minus,grain_give_minus,you_give_text,sheep_want_amount,ore_give_amount,brick_want_amount,sheep_give_amount,brick_give_minus,brick_want_add,grain_give_add,grain_want_add,wood_want_amount,grain_want_icon,wood_give_amount,ore_want_amount,brick_want_icon,menu_header" />
+
 
     <!-- trade menu END -->
 
