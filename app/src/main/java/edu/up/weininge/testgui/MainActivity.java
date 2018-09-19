@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        boardSurfaceView board = (boardSurfaceView) findViewById(R.id.boardSurfaceView);
+        boardSurfaceView board = (boardSurfaceView) findViewById(R.id.board);
 
         Canvas canvas = new Canvas();
 

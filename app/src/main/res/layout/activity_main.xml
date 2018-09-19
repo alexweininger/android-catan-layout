@@ -10,6 +10,8 @@
     All groups but the static bottom menu group are set to GONE.
     -->
 
+
+
     <!--scoreboard group-->
     <android.support.constraint.Group
         android:id="@+id/group_scoreboard"
@@ -33,6 +35,16 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:constraint_referenced_ids="dropText,cancelButton,okButton" />
+
+    <edu.up.weininge.testgui.boardSurfaceView
+        android:id="@+id/board"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/top_buildmenu_alex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <!-- static bottom menu START -->
 
@@ -1127,6 +1139,8 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         app:constraint_referenced_ids="ore_want_minus,brick_give_add,grain_give_icon,wood_give_add,sheep_want_minus,ore_give_minus,brick_give_icon,sheep_give_add,wood_want_icon,brick_give_amount,ore_want_icon,wood_give_icon,grain_want_amount,grain_want_minus,sheep_want_add,ore_give_add,wood_give_minus,wood_want_add,ore_want_add,brick_want_minus,grain_give_amount,sheep_want_icon,ore_give_icon,sheep_give_icon,sheep_give_minus,wood_want_minus,grain_give_minus,you_give_text,sheep_want_amount,ore_give_amount,brick_want_amount,sheep_give_amount,brick_give_minus,brick_want_add,grain_give_add,grain_want_add,wood_want_amount,grain_want_icon,wood_give_amount,ore_want_amount,brick_want_icon,menu_header" />
+
+
 
 
     <!-- trade menu END -->
