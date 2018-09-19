@@ -58,11 +58,12 @@
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="DC_Name"
             android:textSize="36sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
             app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border"
-            tools:layout_editor_absoluteY="95dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/development_Card_Info"
