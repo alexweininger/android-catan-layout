@@ -1,290 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="89dp">
-
-    <!--scoreboard and development card layout-->
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_middle_dc_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_wall_dc_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="1.0" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_top_border_dc_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_bottom_border_dc_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.76" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_left_dc_border"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <Spinner
-        android:id="@+id/development_Card_Spinner"
-        android:layout_width="118dp"
-        android:layout_height="293dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_left_dc_border"
-        app:layout_constraintStart_toStartOf="@+id/guideline_middle_dc_layout"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top_border_dc_layout" />
-
-    <TextView
-        android:id="@+id/development_Card_Name"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="DC_Name"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top_border_dc_layout" />
-
-    <TextView
-        android:id="@+id/development_Card_Info"
-        android:layout_width="0dp"
-        android:layout_height="228dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border"
-        app:layout_constraintTop_toBottomOf="@+id/development_Card_Name" />
-
-    <Button
-        android:id="@+id/use_Card"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Button"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_bottom_border_dc_layout"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border"
-        app:layout_constraintTop_toBottomOf="@+id/development_Card_Info" />
-
-    <TextView
-        android:id="@+id/victory_Points"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/victoryPoints"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_middle_dc_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top_border_dc_layout" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_right_scorecard_border"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.35" />
-
-    <TextView
-        android:id="@+id/Player1_Name"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Player 1"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right_scorecard_border"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/victory_Points" />
-
-    <TextView
-        android:id="@+id/Player2_Name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:text="Player 2"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="@+id/Player1_Name"
-        app:layout_constraintStart_toStartOf="@+id/Player1_Name"
-        app:layout_constraintTop_toBottomOf="@+id/Player1_Name" />
-
-    <TextView
-        android:id="@+id/Player3_Name"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:text="Player 3"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="@+id/Player2_Name"
-        app:layout_constraintStart_toStartOf="@+id/Player2_Name"
-        app:layout_constraintTop_toBottomOf="@+id/Player2_Name" />
-
-    <TextView
-        android:id="@+id/Player4_Name"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:text="Player 4"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="@+id/Player3_Name"
-        app:layout_constraintStart_toStartOf="@+id/Player3_Name"
-        app:layout_constraintTop_toBottomOf="@+id/Player3_Name" />
-
-    <TextView
-        android:id="@+id/Player1_Score"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Player1_Score"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/Player1_Name"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_middle_dc_layout"
-        app:layout_constraintStart_toEndOf="@+id/Player1_Name"
-        app:layout_constraintTop_toTopOf="@+id/Player1_Name" />
-
-    <TextView
-        android:id="@+id/Player2_Score"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Player2_Score"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_middle_dc_layout"
-        app:layout_constraintStart_toStartOf="@+id/guideline_right_scorecard_border"
-        app:layout_constraintTop_toTopOf="@+id/Player2_Name" />
-
-    <TextView
-        android:id="@+id/Player3_Score"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Player3_Score"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_middle_dc_layout"
-        app:layout_constraintStart_toEndOf="@+id/Player3_Name"
-        app:layout_constraintTop_toBottomOf="@+id/Player2_Score" />
-
-    <TextView
-        android:id="@+id/Player4_Score"
-        android:layout_width="145dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Player4_Score"
-        app:layout_constraintBottom_toBottomOf="@+id/Player4_Name"
-        app:layout_constraintEnd_toEndOf="@+id/Player3_Score"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toEndOf="@+id/Player4_Name" />
-
-    <!---->
-
-    <android.support.constraint.Group
-        android:id="@+id/group3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/right_buildmenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="1.0" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/top_buildmenu"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="456dp" />
-
-    <TextView
-        android:id="@+id/dropText"
-        android:layout_width="0dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:gravity="end|center"
-        android:text="Would you like to make this trade?"
-        app:layout_constraintBottom_toBottomOf="@+id/okButton"
-        app:layout_constraintEnd_toStartOf="@+id/okButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/left_buildmenu"
-        app:layout_constraintTop_toTopOf="@+id/okButton" />
-
-    <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="97dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        android:text="@android:string/cancel"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
-        app:layout_constraintEnd_toStartOf="@+id/right_buildmenu"
-        app:layout_constraintTop_toTopOf="@+id/top_buildmenu"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <Button
-        android:id="@+id/okButton"
-        android:layout_width="97dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        android:text="@android:string/ok"
-        app:layout_constraintBottom_toBottomOf="@+id/cancelButton"
-        app:layout_constraintEnd_toStartOf="@+id/cancelButton"
-        app:layout_constraintTop_toTopOf="@+id/cancelButton"
-        app:layout_constraintVertical_bias="0.125" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/bottom_buildmenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.82" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/left_buildmenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.0" />
-
 
     <Button
         android:id="@+id/button_city"
@@ -295,7 +16,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/city"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/top_buildmenu_alex"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/heading_build" />
 
     <Button
@@ -315,7 +36,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/road"
-        app:layout_constraintEnd_toStartOf="@+id/top_buildmenu_alex"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="@+id/heading_build"
         app:layout_constraintTop_toBottomOf="@+id/heading_build" />
 
@@ -602,7 +323,7 @@
         app:layout_constraintGuide_begin="20dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/top_buildmenu_alex"
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -652,15 +373,5 @@
         app:layout_constraintEnd_toEndOf="@+id/button_scoreboard"
         app:layout_constraintStart_toStartOf="@+id/button_scoreboard"
         app:layout_constraintTop_toBottomOf="@+id/button_scoreboard" />
-
-    <edu.up.weininge.testgui.boardSurfaceView
-        android:id="@+id/boardSurfaceView"
-        android:layout_width="0dp"
-        android:layout_height="450dp"
-        app:layout_constraintBottom_toTopOf="@+id/top_buildmenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
