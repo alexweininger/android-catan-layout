@@ -623,4 +623,445 @@
         app:layout_constraintTop_toBottomOf="@+id/Player3_Score" />
 
 
+    <!-- trade menu START -->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline_trading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <TextView
+        android:id="@+id/menu_header"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Trading Menu"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/seperator_guideline_trading"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_trading" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/seperator_guideline_trading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="95dp" />
+
+    <ImageButton
+        android:id="@+id/sheep_want_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/sheep_give_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="224dp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/wood_want_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/wood_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/wood_give_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="224dp"
+        app:layout_constraintStart_toEndOf="@+id/wood_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/ore_want_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/ore_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/ore_give_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="224dp"
+        app:layout_constraintStart_toEndOf="@+id/ore_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/grain_want_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/grain_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/grain_give_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="224dp"
+        app:layout_constraintStart_toEndOf="@+id/grain_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/brick_want_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/brick_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/brick_give_icon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="224dp"
+        app:layout_constraintStart_toEndOf="@+id/brick_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/sheep_want_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_want_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/sheep_give_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_give_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/wood_want_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/wood_want_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/wood_give_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/wood_give_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/ore_want_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/ore_want_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/ore_give_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/ore_give_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/grain_want_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/grain_want_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/grain_give_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/grain_give_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/brick_give_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/brick_give_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/brick_want_add"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/brick_want_icon"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/sheep_want_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_trading"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/sheep_give_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_trading"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/wood_want_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_want_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/wood_give_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_give_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/ore_want_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/wood_want_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/ore_give_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/wood_give_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/grain_want_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/ore_want_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/grain_give_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/ore_give_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/brick_want_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toEndOf="@+id/grain_want_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <ImageButton
+        android:id="@+id/brick_give_minus"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
+        app:layout_constraintStart_toEndOf="@+id/grain_give_add"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading"
+        app:srcCompat="@drawable/placerholder_image" />
+
+    <TextView
+        android:id="@+id/you_want_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="3dp"
+        android:text="You want:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/left_guideline_trading"
+        app:layout_constraintTop_toBottomOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/you_give_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="180dp"
+        android:text="You give:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/left_guideline_trading"
+        app:layout_constraintTop_toBottomOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/sheep_give_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/sheep_want_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        android:text="2"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/sheep_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/wood_want_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/wood_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/wood_give_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        android:text="2"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/wood_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/ore_want_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/ore_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/ore_give_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/ore_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/grain_want_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/grain_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/grain_give_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/grain_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/brick_give_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="284dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/brick_give_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <TextView
+        android:id="@+id/brick_want_amount"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="108dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/brick_want_minus"
+        app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
+
+    <!-- trade menu END -->
+
 </android.support.constraint.ConstraintLayout>
