@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.SurfaceView;
+import android.widget.HeaderViewListAdapter;
 import android.widget.LinearLayout;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
 //        Button buildMenuButton
 
-
+        board.createHexagons();
         board.draw(canvas);
+
+
 
         /*
         need to create listeners for every single button

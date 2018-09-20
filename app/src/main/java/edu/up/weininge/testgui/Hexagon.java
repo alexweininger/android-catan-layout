@@ -5,6 +5,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.util.AttributeSet;
+import android.util.Log;
+
+import org.w3c.dom.Attr;
 
 public class Hexagon extends boardSurfaceView {
 
@@ -12,6 +16,7 @@ public class Hexagon extends boardSurfaceView {
     protected int y;
     protected int size;
     protected int color;
+    protected Path hexagonPath;
 
     public Hexagon(Context context, int x, int y) {
         super(context);
@@ -23,25 +28,26 @@ public class Hexagon extends boardSurfaceView {
         this.color = Color.RED;
     }
 
-    public Hexagon(Context context, int x, int y, int size, int color) {
+    public Hexagon(Context context, int x, int y, int size) {
         super(context);
         setWillNotDraw(false);
 
         this.x = x;
         this.y = y;
         this.size = size;
-        this.color = color;
+        this.color = Color.GREEN;
     }
 
-    protected void onDraw(Canvas canvas) {
+    protected void drawHexagon(Canvas canvas) {
         Paint paint = new Paint();
         paint.setColor(this.color);
         paint.setStyle(Paint.Style.FILL);
 
-        int[][] points = calculateHexagonPoints(400, 400, 100);
-
+        int[][] points = calculateHexagonPoints(this.x, this.y, 100);
+        Log.d("draw", "drawing a hexagon at" + this.x + ", " + this.y);
         Path hexagonPath = createHexagonPath(points);
         canvas.drawPath(hexagonPath, paint);
+
     }
 
     protected int[][] calculateHexagonPoints(int x, int y, int size) {
@@ -60,7 +66,7 @@ public class Hexagon extends boardSurfaceView {
     }
 
     protected Path createHexagonPath(int[][] corners) {
-        Path hexagonPath = new Path();
+        hexagonPath = new Path();
         hexagonPath.moveTo(corners[0][0], corners[0][1]);
 
         for(int i = 1; i < corners.length; i++) {
