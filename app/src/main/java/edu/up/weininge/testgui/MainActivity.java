@@ -47,6 +47,9 @@ public class MainActivity extends Activity {
         // draw the board of hexagons and ports on the canvas
         board.createHexagons();
         board.createPorts();
+        board.createHouses();
+
+
         board.draw(canvas);
 
         // the spinner that holds the development cards the player has
