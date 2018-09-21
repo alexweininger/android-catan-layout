@@ -2,6 +2,7 @@ package edu.up.weininge.testgui;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.util.AttributeSet;
 
 import java.util.ArrayList;
@@ -54,15 +55,25 @@ public class HexagonGrid extends boardSurfaceView {
 
         hexagons = new ArrayList<Hexagon>();
 
-        int[] rows = {3, 4, 5, 4, 3};
+        int[] rows = {1, 1, 0, 1, 1};
+        int[] hexagonsInEachRow = {3, 4, 5, 4, 3};
         int offsetX;
 
         for(int i = 0; i < 5; i++) {
-            for(int j = 0; j < 5; j++) {
+            for(int j = 0; j < hexagonsInEachRow[i]; j++) {
 
-                offsetX = (j % 2 == 0)? (int) this.width/2 + margin/2:0;
 
-                Hexagon hexagon = new Hexagon(this.getContext(), offsetX + x + (int) ((this.width + this.margin) * i), y + (((this.height) * 3)/4 + this.margin) * j, size);
+
+                int color = Color.LTGRAY;
+//                if (j < 5 - rows[i] || j > rows[i]) {
+//                    color = Color.BLACK;
+//                }
+
+
+
+                offsetX = (i % 2 == 0)? (int) this.width/2 + margin/2:0;
+
+                Hexagon hexagon = new Hexagon(this.getContext(), offsetX + x + (int) ((this.width + this.margin) * (j + rows[i])), y + (((this.height) * 3)/4 + this.margin) * i, size, color);
                 hexagons.add(hexagon);
             }
         }

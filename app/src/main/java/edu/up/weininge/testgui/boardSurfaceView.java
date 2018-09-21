@@ -30,7 +30,7 @@ public class boardSurfaceView extends SurfaceView {
     }
 
     public void createHexagons() {
-        grid = new HexagonGrid(this.getContext(), 100, 100, 150, 40);
+        grid = new HexagonGrid(this.getContext(), 100, 150, 150, 40);
     }
 
 

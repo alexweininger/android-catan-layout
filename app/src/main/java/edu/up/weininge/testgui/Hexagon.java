@@ -16,6 +16,7 @@ public class Hexagon extends boardSurfaceView {
     protected int y;
     protected int size;
     protected int color;
+
     protected Path hexagonPath;
 
     public Hexagon(Context context, int x, int y, int size) {
