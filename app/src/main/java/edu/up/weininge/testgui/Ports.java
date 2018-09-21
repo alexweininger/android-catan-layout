@@ -18,7 +18,7 @@ public class Ports {
         this.x = x;
         this.y = y;
         this.size = 50;
-        this.color = Color.RED;
+        this.color = Color.GRAY;
         paint = new Paint();
 
     }
