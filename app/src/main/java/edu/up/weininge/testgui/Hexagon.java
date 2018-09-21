@@ -18,6 +18,8 @@ public class Hexagon extends boardSurfaceView {
     protected int color;
 
     protected Path hexagonPath;
+    protected int[][] points;
+
 
     protected boolean isRobber;
 
@@ -50,7 +52,7 @@ public class Hexagon extends boardSurfaceView {
         paint.setColor(this.color);
         paint.setStyle(Paint.Style.FILL);
 
-        int[][] points = calculateHexagonPoints(this.x, this.y, this.size);
+        points = calculateHexagonPoints(this.x, this.y, this.size);
 
 
 
@@ -108,6 +110,10 @@ public class Hexagon extends boardSurfaceView {
         hexagonPath.close();
 
         return hexagonPath;
+    }
+
+    protected int[][] getHexagonPoints() {
+        return this.points;
     }
 
 }
