@@ -905,6 +905,7 @@
         app:layout_constraintGuide_percent="0.17" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_score"
         android:layout_width="0dp"
         android:layout_height="37dp"
@@ -917,6 +918,7 @@
         app:layout_constraintTop_toTopOf="@+id/sidebar_button_menu" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_trade"
         android:layout_width="0dp"
         android:layout_height="37dp"
@@ -929,6 +931,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_playername" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_menu"
         android:layout_width="75dp"
         android:layout_height="37dp"
@@ -956,6 +959,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_menu" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_road"
         android:layout_width="0dp"
         android:layout_height="37dp"
@@ -968,6 +972,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_build" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_settlement"
         android:layout_width="0dp"
         android:layout_height="37dp"
@@ -981,7 +986,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_road" />
 
     <Button
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_city"
         android:layout_width="0dp"
         android:layout_height="37dp"
@@ -995,7 +1000,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_settlement" />
 
     <Button
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_devcards"
         android:layout_width="0dp"
         android:layout_height="37dp"
@@ -1009,6 +1014,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_city" />
 
     <TextView
+
         android:id="@+id/sidebar_heading_playername"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
@@ -1022,6 +1028,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_devcards" />
 
     <TextView
+
         android:id="@+id/sidebar_heading_vp"
         android:layout_width="0dp"
         android:layout_height="29dp"
@@ -1036,6 +1043,7 @@
         app:layout_constraintTop_toTopOf="@+id/sidebar_heading_playername" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_roll"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
@@ -1046,6 +1054,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_trade" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_endturn"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
