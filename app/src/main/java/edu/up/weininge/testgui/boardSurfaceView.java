@@ -31,10 +31,11 @@ public class boardSurfaceView extends SurfaceView {
     }
 
     public void createHexagons() {
-        grid = new HexagonGrid(this.getContext(), 100, 150, 150, 40);
+        grid = new HexagonGrid(this.getContext(), 100, 200, 145, 40);
     }
 
     public void onDraw(Canvas canvas) {
+        canvas.drawARGB(255, 237, 237, 171);
             grid.drawGrid(canvas);
             for(int i = 0; i < 9; i++){
                 Log.d("user1", "" + i);
