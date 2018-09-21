@@ -62,6 +62,8 @@
     <string name = "value_grain">0</string>
     <string name = "value_ore">0</string>
 
+    <string name="confirmString">Would you like to make this trade?</string>
+
 
 
     <!--resources-->

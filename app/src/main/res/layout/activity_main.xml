@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#89aaaaaa"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-    >
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
 
     <!--
     Updated with groups.  A group is just a way to hide / show a group of views.  So I (Alex) added groups for each menu.
@@ -46,21 +45,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="ore_want_minus,brick_give_add,grain_give_icon,wood_give_add,sheep_want_minus,ore_give_minus,brick_give_icon,sheep_give_add,wood_want_icon,brick_give_amount,ore_want_icon,wood_give_icon,grain_want_amount,grain_want_minus,sheep_want_add,ore_give_add,wood_give_minus,wood_want_add,ore_want_add,brick_want_minus,grain_give_amount,sheep_want_icon,ore_give_icon,sheep_give_icon,sheep_give_minus,wood_want_minus,grain_give_minus,you_give_text,sheep_want_amount,ore_give_amount,brick_want_amount,sheep_give_amount,brick_give_minus,brick_want_add,grain_give_add,grain_want_add,wood_want_amount,grain_want_icon,wood_give_amount,ore_want_amount,brick_want_icon,menu_header" />
+        app:constraint_referenced_ids="you_want_text, ore_want_minus,brick_give_add,grain_give_icon,wood_give_add,sheep_want_minus,ore_give_minus,brick_give_icon,sheep_give_add,wood_want_icon,brick_give_amount,ore_want_icon,wood_give_icon,grain_want_amount,grain_want_minus,sheep_want_add,ore_give_add,wood_give_minus,wood_want_add,ore_want_add,brick_want_minus,grain_give_amount,sheep_want_icon,ore_give_icon,sheep_give_icon,sheep_give_minus,wood_want_minus,grain_give_minus,you_give_text,sheep_want_amount,ore_give_amount,brick_want_amount,sheep_give_amount,brick_give_minus,brick_want_add,grain_give_add,grain_want_add,wood_want_amount,grain_want_icon,wood_give_amount,ore_want_amount,brick_want_icon,menu_header,you_want_text" />
 
     <android.support.constraint.Group
         android:id="@+id/group_scoreboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:constraint_referenced_ids="you_want_text,Player1_Name,Player1_Score,Player2_Score,victory_Points,Player4_Name,Player3_Name,Player2_Name,Player3_Score,Player4_Score" />
+        android:visibility="visible"
+        app:constraint_referenced_ids="Player1_Name,Player1_Score,Player2_Score,victory_Points,Player4_Name,Player3_Name,Player2_Name,Player3_Score,Player4_Score" />
 
     <!--dev card group-->
     <android.support.constraint.Group
         android:id="@+id/group_development_card_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         app:constraint_referenced_ids="development_Card_Name,development_Card_Info,use_Card,development_Card_Spinner" />
 
     <!-- build menu group -->
@@ -68,8 +67,8 @@
         android:id="@+id/group_build_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:constraint_referenced_ids="dropText,cancelButton,okButton" />
+        android:visibility="gone"
+        app:constraint_referenced_ids="dropText,cancelButton,okButton,label_confirm_trade" />
 
 
     <!-- static bottom menu START -->
@@ -124,25 +123,23 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_label_ore" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guideline_bottom_83"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.8304279" />
 
 
-
     <android.support.constraint.Guideline
-        android:id="@+id/guideline5"
+        android:id="@+id/guideline_right_68"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.68" />
 
 
-
     <android.support.constraint.Guideline
-        android:id="@+id/guideline9"
+        android:id="@+id/guideline_right_84"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -150,51 +147,50 @@
 
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
+        android:id="@+id/guideline_middle_40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.4" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline7"
+        android:id="@+id/guideline_left_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.0" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline8"
+        android:id="@+id/guideline_left_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.20019531" />
 
 
-
     <android.support.constraint.Guideline
-        android:id="@+id/guideline10"
+        android:id="@+id/guideline_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline_middle_54"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5419922" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline13"
+        android:id="@+id/guideline_left_30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.3" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline14"
+        android:id="@+id/guideline_right_100"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -220,22 +216,26 @@
         app:layout_constraintGuide_percent="0.92" />
 
     <TextView
-        android:id="@+id/dropText"
+        android:id="@+id/label_confirm_trade"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="416dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="end|center"
-        android:text="Would you like to make this trade?"
+        android:text="@string/confirmString"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
+        app:layout_constraintEnd_toStartOf="@+id/okButton"
         app:layout_constraintStart_toStartOf="@+id/guideline_right_sidebar"
         app:layout_constraintTop_toTopOf="@+id/top_buildmenu_alex"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/cancelButton"
         android:layout_width="97dp"
         android:layout_height="39dp"
@@ -249,6 +249,7 @@
         app:layout_constraintVertical_bias="0.6" />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/okButton"
         android:layout_width="97dp"
         android:layout_height="39dp"
@@ -312,6 +313,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="@+id/development_Card_Name"
         app:layout_constraintEnd_toStartOf="@+id/guideline_left_dc_border"
         app:layout_constraintTop_toTopOf="@+id/development_Card_Name" />
@@ -323,8 +325,10 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:background="@android:color/white"
         android:text="@string/development_Card_Name"
-        android:textSize="36sp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/development_Card_Info"
         app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
         app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border" />
@@ -334,19 +338,23 @@
         android:layout_width="0dp"
         android:layout_height="230dp"
         android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
         android:text="@string/development_Card_Info"
-        android:textSize="36sp"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/use_Card"
         app:layout_constraintEnd_toEndOf="@+id/development_Card_Name"
         app:layout_constraintStart_toStartOf="@+id/development_Card_Name" />
 
     <Button
         android:id="@+id/use_Card"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginBottom="8dp"
         android:text="@string/Use_Button"
-        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline_bottom_border_dc_layout"
         app:layout_constraintEnd_toEndOf="@+id/development_Card_Info"
         app:layout_constraintStart_toStartOf="@+id/development_Card_Name" />
@@ -359,20 +367,22 @@
         android:id="@+id/victory_Points"
         android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/victoryPoints"
+        android:text="@string/scoreboard"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_top_border_dc_layout" />
+        app:layout_constraintStart_toStartOf="@+id/left_guideline_trading"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Player1_Name"
         android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/Player1"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/victory_Points"
         app:layout_constraintTop_toBottomOf="@+id/victory_Points" />
@@ -383,6 +393,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:text="@string/Player2"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/Player1_Name"
         app:layout_constraintStart_toStartOf="@+id/Player1_Name"
@@ -394,6 +405,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:text="@string/Player3"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/Player2_Name"
         app:layout_constraintStart_toStartOf="@+id/Player1_Name"
@@ -405,6 +417,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:text="@string/Player4"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/Player3_Name"
         app:layout_constraintStart_toStartOf="@+id/Player1_Name"
@@ -416,6 +429,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:text="@string/Player1_Score"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/Player1_Name"
         app:layout_constraintStart_toEndOf="@+id/Player1_Name"
@@ -428,6 +442,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/Player2_Score"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/Player1_Score"
         app:layout_constraintStart_toEndOf="@+id/Player2_Name"
@@ -440,6 +455,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/Player3_Score"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/Player2_Score"
         app:layout_constraintStart_toEndOf="@+id/Player3_Name"
@@ -452,6 +468,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/Player4_Score"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/Player3_Score"
         app:layout_constraintStart_toEndOf="@+id/Player4_Name"
@@ -466,7 +483,7 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="31dp" />
+        app:layout_constraintGuide_begin="174dp" />
 
     <TextView
         android:id="@+id/menu_header"
@@ -770,11 +787,11 @@
         android:id="@+id/you_want_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:text="@string/you_Want"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/left_guideline_trading"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seperator_guideline_trading" />
 
     <TextView
@@ -909,8 +926,8 @@
         app:layout_constraintGuide_percent="0.17" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_score"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -922,8 +939,8 @@
         app:layout_constraintTop_toTopOf="@+id/sidebar_button_menu" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_trade"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -931,19 +948,19 @@
         android:text="@string/trade"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_playername" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_menu"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="75dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/menu"
         android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -959,12 +976,12 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_menu" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_road"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -972,12 +989,12 @@
         android:text="@string/road"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_build" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_settlement"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -986,12 +1003,12 @@
         android:text="@string/settlement"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_road" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_city"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -1000,12 +1017,12 @@
         android:text="@string/city"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_settlement" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_devcards"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -1014,7 +1031,7 @@
         android:text="@string/developmentCards"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_city" />
 
     <TextView
@@ -1028,7 +1045,7 @@
         android:textAlignment="viewStart"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_devcards" />
 
     <TextView
@@ -1047,25 +1064,25 @@
         app:layout_constraintTop_toTopOf="@+id/sidebar_heading_playername" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_roll"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/roll"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_trade" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_endturn"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/endTurn"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_roll" />
 
     <TextView
@@ -1075,13 +1092,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/heading_resources"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_endturn"
         tools:text="@string/heading_resources" />
 
@@ -1094,7 +1111,7 @@
         android:textAlignment="textStart"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_resources" />
 
     <TextView
@@ -1145,7 +1162,6 @@
         android:id="@+id/sidebar_value_brick"
         android:layout_width="20dp"
         android:layout_height="29dp"
-        android:layout_marginStart="8dp"
         android:text="00"
         android:textColor="@android:color/black"
         android:textSize="18sp"

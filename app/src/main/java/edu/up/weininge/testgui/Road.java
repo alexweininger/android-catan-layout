@@ -35,6 +35,4 @@ public class Road {
         canvas.drawLine(roadPoints[0][0], roadPoints[0][1], roadPoints[1][0], roadPoints[1][1], line);
 
     }
-
-
 }
