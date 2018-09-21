@@ -66,7 +66,7 @@
         android:id="@+id/group_build_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         app:constraint_referenced_ids="dropText,cancelButton,okButton" />
 
 
@@ -215,21 +215,22 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <TextView
         android:id="@+id/dropText"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="368dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="end|center"
         android:text="Would you like to make this trade?"
         app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
         app:layout_constraintStart_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintTop_toTopOf="@+id/top_buildmenu_alex" />
+        app:layout_constraintTop_toTopOf="@+id/top_buildmenu_alex"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/cancelButton"
@@ -262,7 +263,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.83" />
+        app:layout_constraintGuide_percent="1.0" />
 
     <!-- build menu END -->
 
