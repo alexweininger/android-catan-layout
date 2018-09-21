@@ -10,6 +10,8 @@ import android.util.Log;
 
 import org.w3c.dom.Attr;
 
+import java.util.Random;
+
 public class Hexagon extends boardSurfaceView {
 
     protected int x;
@@ -18,6 +20,8 @@ public class Hexagon extends boardSurfaceView {
     protected int color;
 
     protected Path hexagonPath;
+    protected int[][] points;
+
 
     protected boolean isRobber;
 
@@ -50,7 +54,7 @@ public class Hexagon extends boardSurfaceView {
         paint.setColor(this.color);
         paint.setStyle(Paint.Style.FILL);
 
-        int[][] points = calculateHexagonPoints(this.x, this.y, this.size);
+        points = calculateHexagonPoints(this.x, this.y, this.size);
 
 
 
@@ -76,6 +80,11 @@ public class Hexagon extends boardSurfaceView {
 
        // canvas.drawRect(points[3][0], points[3][1], points[0][0], points[0][1], newPaint);
 
+        Random random = new Random();
+
+
+        Road road = new Road(points, random.nextInt(4));
+        road.drawRoad(canvas);
 
     }
 
@@ -95,6 +104,7 @@ public class Hexagon extends boardSurfaceView {
 
             Log.d("user", "\nx: " + points[i][0] + " y: " + points[i][1]);
         }
+        this.points = points;
         return points;
     }
 
@@ -108,6 +118,10 @@ public class Hexagon extends boardSurfaceView {
         hexagonPath.close();
 
         return hexagonPath;
+    }
+
+    protected int[][] getHexagonPoints() {
+        return this.points;
     }
 
 }
