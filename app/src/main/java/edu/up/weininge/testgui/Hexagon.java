@@ -19,7 +19,9 @@ public class Hexagon extends boardSurfaceView {
 
     protected Path hexagonPath;
 
-    public Hexagon(Context context, int x, int y, int size) {
+    protected boolean isRobber;
+
+    public Hexagon(Context context, int x, int y, int size, boolean isRobber) {
         super(context);
         setWillNotDraw(false);
 
@@ -27,9 +29,11 @@ public class Hexagon extends boardSurfaceView {
         this.y = y;
         this.size = size;
         this.color = Color.CYAN;
+
+        this.isRobber = isRobber; // ROBBER IS BAD CODE PLS FIX
     }
 
-    public Hexagon(Context context, int x, int y, int size, int color) {
+    public Hexagon(Context context, int x, int y, int size, int color, boolean isRobber) {
         super(context);
         setWillNotDraw(false);
 
@@ -37,6 +41,8 @@ public class Hexagon extends boardSurfaceView {
         this.y = y;
         this.size = size;
         this.color = color;
+
+        this.isRobber = isRobber; // BAD CODE
     }
 
     protected void drawHexagon(Canvas canvas) {
@@ -51,13 +57,22 @@ public class Hexagon extends boardSurfaceView {
         Path hexagonPath = createHexagonPath(points);
         canvas.drawPath(hexagonPath, paint);
 
-        Paint newPaint = new Paint();
-        newPaint.setColor(Color.RED);
-        newPaint.setStyle(Paint.Style.FILL);
+        Paint blackFont = new Paint();
+        blackFont.setColor(Color.BLACK);
+        blackFont.setStyle(Paint.Style.FILL);
 
-        newPaint.setTextSize(50);
+        blackFont.setTextSize(50);
 
-        canvas.drawText("1", points[3][0] + this.size/2, points[3][1] - this.size/2, newPaint);
+        canvas.drawText("1", points[3][0] + this.size/2, points[3][1] - this.size/2, blackFont);
+
+        Paint robberPaint = new Paint();
+        robberPaint.setColor(Color.MAGENTA);
+        robberPaint.setStyle(Paint.Style.FILL);
+
+        if(this.isRobber) {
+            canvas.drawCircle(points[3][0] + this.size, points[3][1] - this.size/2, 25, robberPaint);
+            Log.d("user", "hexagon robber");
+        }
 
        // canvas.drawRect(points[3][0], points[3][1], points[0][0], points[0][1], newPaint);
 

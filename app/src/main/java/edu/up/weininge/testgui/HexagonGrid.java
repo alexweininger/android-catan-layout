@@ -4,8 +4,10 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class HexagonGrid extends boardSurfaceView {
 
@@ -14,6 +16,10 @@ public class HexagonGrid extends boardSurfaceView {
     protected int height;
     protected double width;
     protected int margin;
+    protected int[] numTiles = {4, 3, 3, 3, 4};
+    protected int[] colors = {Color.GREEN, Color.argb(255,204, 153, 0), Color.RED, Color.argb(255,194, 194, 214), Color.argb(255,102, 102, 204)};
+
+    protected int[] robberLocation = {2, 2};
 
     ArrayList<Hexagon> hexagons = new ArrayList<Hexagon>();
 
@@ -62,23 +68,40 @@ public class HexagonGrid extends boardSurfaceView {
         for(int i = 0; i < 5; i++) {
             for(int j = 0; j < hexagonsInEachRow[i]; j++) {
 
+                boolean isRobber = false;
+                if(robberLocation[0] == i && robberLocation[1] == j) {
+                    isRobber = true;
+                    Log.d("user", "grid robber");
+                }
 
-
-                int color = Color.LTGRAY;
-//                if (j < 5 - rows[i] || j > rows[i]) {
-//                    color = Color.BLACK;
-//                }
-
-
+                int color = getTile(i, j);
 
                 offsetX = (i % 2 == 0)? (int) this.width/2 + margin/2:0;
 
-                Hexagon hexagon = new Hexagon(this.getContext(), offsetX + x + (int) ((this.width + this.margin) * (j + rows[i])), y + (((this.height) * 3)/4 + this.margin) * i, size, color);
+                Hexagon hexagon = new Hexagon(this.getContext(), offsetX + x + (int) ((this.width + this.margin) * (j + rows[i])), y + (((this.height) * 3)/4 + this.margin) * i, size, color, isRobber);
                 hexagons.add(hexagon);
             }
         }
     }
 
+    protected int getTile(int i, int j) {
+
+        if(i == 2 && j == 2) {
+            return Color.GRAY;
+        }
+
+        int max = numTiles.length - 1;
+        int min = 0;
+        int tile = 0;
+        Random random = new Random();
+        int randomNumber = random.nextInt((max - min) + 1) + min;
+        while(numTiles[randomNumber] < 0) {
+            randomNumber = random.nextInt((max - min) + 1) + min;
+        }
+        tile = randomNumber;
+        numTiles[randomNumber]--;
+        return colors[tile];
+    }
 
 
 
