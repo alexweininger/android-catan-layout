@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#89aaaaaa"
-    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-    >
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
 
     <!--
     Updated with groups.  A group is just a way to hide / show a group of views.  So I (Alex) added groups for each menu.
@@ -131,14 +130,12 @@
         app:layout_constraintGuide_percent="0.8304279" />
 
 
-
     <android.support.constraint.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.68" />
-
 
 
     <android.support.constraint.Guideline
@@ -169,7 +166,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.20019531" />
-
 
 
     <android.support.constraint.Guideline
@@ -909,8 +905,8 @@
         app:layout_constraintGuide_percent="0.17" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_score"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -922,8 +918,8 @@
         app:layout_constraintTop_toTopOf="@+id/sidebar_button_menu" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_trade"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -935,8 +931,8 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_playername" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_menu"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="75dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
@@ -963,8 +959,8 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_menu" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_road"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -976,8 +972,8 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_build" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_settlement"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -990,8 +986,8 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_road" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_city"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -1004,8 +1000,8 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_settlement" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_devcards"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="8dp"
@@ -1047,8 +1043,8 @@
         app:layout_constraintTop_toTopOf="@+id/sidebar_heading_playername" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_roll"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
@@ -1058,8 +1054,8 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_trade" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/sidebar_button_endturn"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
