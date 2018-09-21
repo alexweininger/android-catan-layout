@@ -21,6 +21,8 @@ public class HexagonGrid extends boardSurfaceView {
 
     protected int[] robberLocation = {2, 2};
 
+    ArrayList<Road> roads = new ArrayList<Road>();
+
     ArrayList<Hexagon> hexagons = new ArrayList<Hexagon>();
 
     public HexagonGrid (Context context, int x, int y, int size, int margin){
@@ -55,6 +57,10 @@ public class HexagonGrid extends boardSurfaceView {
         for(Hexagon h: hexagons) {
             h.drawHexagon(canvas);
         }
+
+        for(Road r: roads) {
+            r.drawRoad(canvas);
+        }
     }
 
     protected void getHexagons(int x, int y, int size) {
@@ -79,6 +85,11 @@ public class HexagonGrid extends boardSurfaceView {
                 offsetX = (i % 2 == 0)? (int) this.width/2 + margin/2:0;
 
                 Hexagon hexagon = new Hexagon(this.getContext(), offsetX + x + (int) ((this.width + this.margin) * (j + rows[i])), y + (((this.height) * 3)/4 + this.margin) * i, size, color, isRobber);
+
+                //int[][] points = hexagon.getHexagonPoints();
+
+                //roads.add(new Road(points, 0));
+
                 hexagons.add(hexagon);
             }
         }
