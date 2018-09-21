@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
 
         board.createHexagons();
         board.createPorts();
+        board.createHouses();
 
 
         board.draw(canvas);
