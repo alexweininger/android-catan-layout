@@ -59,5 +59,7 @@ public class MainActivity extends Activity {
         ArrayAdapter<CharSequence> developmentChoices = ArrayAdapter.createFromResource(this, R.array.resource_Card, android.R.layout.simple_spinner_item);
         developmentChoices.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         developmentSpinner.setAdapter(developmentChoices);
+
+        //yeet
     }
 }
