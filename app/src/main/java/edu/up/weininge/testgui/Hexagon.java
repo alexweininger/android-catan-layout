@@ -18,16 +18,6 @@ public class Hexagon extends boardSurfaceView {
     protected int color;
     protected Path hexagonPath;
 
-    public Hexagon(Context context, int x, int y) {
-        super(context);
-        setWillNotDraw(false);
-
-        this.x = x;
-        this.y = y;
-        this.size = 100;
-        this.color = Color.RED;
-    }
-
     public Hexagon(Context context, int x, int y, int size) {
         super(context);
         setWillNotDraw(false);
@@ -35,7 +25,17 @@ public class Hexagon extends boardSurfaceView {
         this.x = x;
         this.y = y;
         this.size = size;
-        this.color = Color.GREEN;
+        this.color = Color.CYAN;
+    }
+
+    public Hexagon(Context context, int x, int y, int size, int color) {
+        super(context);
+        setWillNotDraw(false);
+
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.color = color;
     }
 
     protected void drawHexagon(Canvas canvas) {
@@ -43,16 +43,32 @@ public class Hexagon extends boardSurfaceView {
         paint.setColor(this.color);
         paint.setStyle(Paint.Style.FILL);
 
-        int[][] points = calculateHexagonPoints(this.x, this.y, 100);
-        Log.d("draw", "drawing a hexagon at" + this.x + ", " + this.y);
+        int[][] points = calculateHexagonPoints(this.x, this.y, this.size);
+
+
+
         Path hexagonPath = createHexagonPath(points);
         canvas.drawPath(hexagonPath, paint);
+
+        Paint newPaint = new Paint();
+        newPaint.setColor(Color.RED);
+        newPaint.setStyle(Paint.Style.FILL);
+
+        newPaint.setTextSize(50);
+
+        canvas.drawText("1", points[3][0] + this.size/2, points[3][1] - this.size/2, newPaint);
+
+       // canvas.drawRect(points[3][0], points[3][1], points[0][0], points[0][1], newPaint);
+
 
     }
 
     protected int[][] calculateHexagonPoints(int x, int y, int size) {
         int[][] points = new int[6][2];
         double angle_deg, angle_rad;
+
+        Log.d("user", "\nhexagon");
+
         for (int i = 0; i < 6; i++) {
 
             angle_deg = 60 * i - 30;
@@ -61,6 +77,7 @@ public class Hexagon extends boardSurfaceView {
             points[i][0] = (int) (x + size * Math.cos(angle_rad));
             points[i][1] = (int) (y + size * Math.sin(angle_rad));
 
+            Log.d("user", "\nx: " + points[i][0] + " y: " + points[i][1]);
         }
         return points;
     }
@@ -76,4 +93,5 @@ public class Hexagon extends boardSurfaceView {
 
         return hexagonPath;
     }
+
 }

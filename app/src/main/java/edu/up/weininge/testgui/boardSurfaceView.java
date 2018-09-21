@@ -16,6 +16,9 @@ public class boardSurfaceView extends SurfaceView {
 
     ArrayList<Hexagon> hexagons = new ArrayList<>();
 
+    int size;
+    HexagonGrid grid;
+
     public boardSurfaceView(Context context) {
         super(context);
         setWillNotDraw(false);
@@ -27,22 +30,11 @@ public class boardSurfaceView extends SurfaceView {
     }
 
     public void createHexagons() {
-        int offsetX;
-        for (int j = 0; j < 10; j++) {
-            for (int i = 0; i < 10; i++) {
-                offsetX = (j % 2 == 0)? 100:0;
-                hexagons.add(new Hexagon(this.getContext(), offsetX + 100 + 200 * i, 150 + 200 * j, 50));
-            }
-        }
+        grid = new HexagonGrid(this.getContext(), 100, 100, 150, 40);
     }
 
 
     public void onDraw(Canvas canvas) {
-
-        for (int i = 0; i < hexagons.size(); i++) {
-            hexagons.get(i).drawHexagon(canvas);
-
-            Log.d("user", "called draw on hexagon at " + hexagons.get(i).x + ", " + hexagons.get(i).y);
-        }
+            grid.drawGrid(canvas);
     }
 }

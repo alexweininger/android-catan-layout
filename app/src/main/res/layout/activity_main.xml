@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#89aaaaaa"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    >
 
     <!--
     Updated with groups.  A group is just a way to hide / show a group of views.  So I (Alex) added groups for each menu.
@@ -11,8 +14,38 @@
     -->
 
 
+    <!-- new sidebar static menu START-->
+
+
+    <!-- new sidebar static menu END-->
+
 
     <!--scoreboard group-->
+
+    <edu.up.weininge.testgui.boardSurfaceView
+        android:id="@+id/board"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_static_sidebar_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="wood_give_amount,sidebar_button_city,ore_want_minus,wood_give_add,grain_give_icon,sheep_give_minus,menu_header,grain_give_add,brick_want_add,wood_give_minus,wood_want_amount,brick_give_minus,sidebar_label_grain,wood_want_add,sidebar_button_trade,ore_want_add,brick_want_amount,you_want_text,sheep_give_icon,brick_give_add,ore_want_amount,sidebar_heading_playername,sheep_give_add,wood_give_icon,sidebar_label_lumber,wood_want_icon,sidebar_label_brick,grain_want_minus,sidebar_button_road,grain_give_minus,sheep_want_amount,sidebar_button_endturn,sheep_want_minus,sheep_want_icon,sidebar_label_wool,sidebar_heading_resources,ore_give_icon,grain_give_amount,heading_resources,sidebar_label_ore,grain_want_add,brick_give_icon,ore_want_icon,sheep_want_add,sidebar_button_menu,sheep_give_amount,you_give_text,brick_want_minus,brick_want_icon,ore_give_amount,ore_give_add,sidebar_button_devcards,sidebar_button_roll,grain_want_icon,wood_want_minus,ore_give_minus,sidebar_heading_build,grain_want_amount,sidebar_button_settlement,brick_give_amount,sidebar_button_score,sidebar_heading_vp,sidebar_value_brick,sidebar_value_ore,sidebar_value_wool,sidebar_value_grain,sidebar_value_lumber" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_trade_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ore_want_minus,brick_give_add,grain_give_icon,wood_give_add,sheep_want_minus,ore_give_minus,brick_give_icon,sheep_give_add,wood_want_icon,brick_give_amount,ore_want_icon,wood_give_icon,grain_want_amount,grain_want_minus,sheep_want_add,ore_give_add,wood_give_minus,wood_want_add,ore_want_add,brick_want_minus,grain_give_amount,sheep_want_icon,ore_give_icon,sheep_give_icon,sheep_give_minus,wood_want_minus,grain_give_minus,you_give_text,sheep_want_amount,ore_give_amount,brick_want_amount,sheep_give_amount,brick_give_minus,brick_want_add,grain_give_add,grain_want_add,wood_want_amount,grain_want_icon,wood_give_amount,ore_want_amount,brick_want_icon,menu_header" />
+
     <android.support.constraint.Group
         android:id="@+id/group_scoreboard"
         android:layout_width="wrap_content"
@@ -33,53 +66,60 @@
         android:id="@+id/group_build_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:constraint_referenced_ids="dropText,cancelButton,okButton" />
-
-    <edu.up.weininge.testgui.boardSurfaceView
-        android:id="@+id/board"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!-- static bottom menu START -->
 
-    <Button
-        android:id="@+id/button_city"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/city"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/heading_build" />
 
-    <Button
-        android:id="@+id/button_settlement"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:text="@string/settlement"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/button_road"
-        app:layout_constraintStart_toStartOf="@+id/button_road"
-        app:layout_constraintTop_toBottomOf="@+id/button_road" />
-
-    <Button
-        android:id="@+id/button_road"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="8dp"
+    <TextView
+        android:id="@+id/sidebar_label_wool"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
         android:layout_marginTop="8dp"
-        android:text="@string/road"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="@+id/heading_build"
-        app:layout_constraintTop_toBottomOf="@+id/heading_build" />
+        android:text="@string/wool"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/sidebar_label_ore"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_label_lumber" />
+
+    <TextView
+        android:id="@+id/sidebar_label_lumber"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lumber"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/sidebar_label_ore"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_label_grain" />
+
+    <TextView
+        android:id="@+id/sidebar_label_brick"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/brick"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/sidebar_label_ore"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_label_wool" />
+
+    <TextView
+        android:id="@+id/sidebar_label_grain"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/grain"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/sidebar_label_ore"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_label_ore" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -88,19 +128,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.8304279" />
 
-    <TextView
-        android:id="@+id/heading_build"
-        android:layout_width="0dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/heading_build"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline5"
@@ -109,42 +137,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.68" />
 
-    <TextView
-        android:id="@+id/heading_trade"
-        android:layout_width="0dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/heading_trade"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_chainStyle="spread" />
 
-    <Button
-        android:id="@+id/button_trade"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/trade"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/heading_trade" />
-
-    <Button
-        android:id="@+id/button_scoreboard"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/scoreboard"
-        app:layout_constraintEnd_toEndOf="@+id/heading_game"
-        app:layout_constraintStart_toStartOf="@+id/heading_game"
-        app:layout_constraintTop_toBottomOf="@+id/heading_game" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
@@ -153,19 +146,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.84" />
 
-    <TextView
-        android:id="@+id/heading_resources"
-        android:layout_width="0dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/heading_resources"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline6"
@@ -188,173 +168,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.20019531" />
 
-    <TextView
-        android:id="@+id/heading_playerName"
-        android:layout_width="0dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/heading_playerName"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
-    <TextView
-        android:id="@+id/label_ore"
-        android:layout_width="48dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/ore"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/heading_resources" />
-
-    <TextView
-        android:id="@+id/value_lumber"
-        android:layout_width="24dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/value_lumber"
-        app:layout_constraintStart_toEndOf="@+id/label_lumber"
-        app:layout_constraintTop_toTopOf="@+id/label_lumber" />
-
-    <TextView
-        android:id="@+id/value_wool"
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/value_wool"
-        app:layout_constraintEnd_toEndOf="@+id/value_lumber"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/label_wool"
-        app:layout_constraintTop_toBottomOf="@+id/value_lumber" />
-
-    <TextView
-        android:id="@+id/value_brick"
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/value_brick"
-        app:layout_constraintEnd_toEndOf="@+id/value_wool"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/label_brick"
-        app:layout_constraintTop_toBottomOf="@+id/value_wool" />
-
-    <TextView
-        android:id="@+id/value_grain"
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/value_grain"
-        app:layout_constraintStart_toEndOf="@+id/label_grain"
-        app:layout_constraintTop_toBottomOf="@+id/value_ore" />
-
-    <TextView
-        android:id="@+id/value_ore"
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/value_ore"
-        app:layout_constraintStart_toEndOf="@+id/label_ore"
-        app:layout_constraintTop_toTopOf="@+id/label_ore" />
-
-    <TextView
-        android:id="@+id/label_victoryPoints"
-        android:layout_width="101dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Victory Points"
-        android:textAlignment="textStart"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/heading_playerName" />
-
-    <TextView
-        android:id="@+id/value_victoryPoints"
-        android:layout_width="35dp"
-        android:layout_height="19dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:text="0"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/label_victoryPoints"
-        app:layout_constraintStart_toEndOf="@+id/label_victoryPoints"
-        app:layout_constraintTop_toTopOf="@+id/label_victoryPoints"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button_endTurn"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/endTurn"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintStart_toStartOf="@+id/guideline13"
-        app:layout_constraintTop_toBottomOf="@+id/value_victoryPoints" />
-
-    <Button
-        android:id="@+id/button_roll"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/roll"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/guideline13"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toBottomOf="@+id/label_victoryPoints" />
-
-    <TextView
-        android:id="@+id/label_grain"
-        android:layout_width="46dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/grain"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/label_ore" />
-
-    <TextView
-        android:id="@+id/label_lumber"
-        android:layout_width="48dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/lumber"
-        app:layout_constraintStart_toEndOf="@+id/value_ore"
-        app:layout_constraintTop_toBottomOf="@+id/heading_resources" />
-
-    <TextView
-        android:id="@+id/label_wool"
-        android:layout_width="48dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/wool"
-        app:layout_constraintStart_toStartOf="@+id/label_lumber"
-        app:layout_constraintTop_toBottomOf="@+id/label_lumber" />
-
-    <TextView
-        android:id="@+id/label_brick"
-        android:layout_width="48dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/brick"
-        app:layout_constraintStart_toStartOf="@+id/label_wool"
-        app:layout_constraintTop_toBottomOf="@+id/label_wool" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline10"
@@ -370,15 +184,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5419922" />
 
-    <Button
-        android:id="@+id/button_development"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:text="@string/developmentCards"
-        app:layout_constraintEnd_toEndOf="@+id/button_city"
-        app:layout_constraintStart_toStartOf="@+id/button_city"
-        app:layout_constraintTop_toBottomOf="@+id/button_city" />
-
     <android.support.constraint.Guideline
         android:id="@+id/guideline13"
         android:layout_width="wrap_content"
@@ -393,27 +198,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="1.0" />
 
-    <TextView
-        android:id="@+id/heading_game"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/heading_game"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/guideline14"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
-
-    <Button
-        android:id="@+id/button_menu"
-        android:layout_width="0dp"
-        android:layout_height="37dp"
-        android:text="@string/menu"
-        app:layout_constraintEnd_toEndOf="@+id/button_scoreboard"
-        app:layout_constraintStart_toStartOf="@+id/button_scoreboard"
-        app:layout_constraintTop_toBottomOf="@+id/button_scoreboard" />
 
     <!-- static bottom menu END -->
 
@@ -435,7 +219,7 @@
 
     <TextView
         android:id="@+id/dropText"
-        android:layout_width="783dp"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
@@ -444,7 +228,7 @@
         android:gravity="end|center"
         android:text="Would you like to make this trade?"
         app:layout_constraintBottom_toTopOf="@+id/bottom_buildmenu"
-        app:layout_constraintStart_toStartOf="@+id/left_buildmenu"
+        app:layout_constraintStart_toStartOf="@+id/guideline_right_sidebar"
         app:layout_constraintTop_toTopOf="@+id/top_buildmenu_alex" />
 
     <Button
@@ -479,13 +263,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.83" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/left_buildmenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.0" />
 
     <!-- build menu END -->
 
@@ -1117,30 +894,250 @@
         app:layout_constraintStart_toEndOf="@+id/brick_want_minus"
         app:layout_constraintTop_toTopOf="@+id/seperator_guideline_trading" />
 
-    <android.support.constraint.Group
-        android:id="@+id/group_bottom_static_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="628dp"
-        android:layout_marginEnd="1023dp"
-        android:layout_marginTop="3dp"
-        android:visibility="visible"
-        app:constraint_referenced_ids="label_grain,heading_trade,value_ore,button_settlement,value_victoryPoints,button_trade,heading_game,button_city,label_wool,button_menu,heading_playerName,value_lumber,value_brick,value_grain,label_victoryPoints,value_wool,button_scoreboard,label_brick,button_road,button_development,button_roll,label_ore,button_endTurn,heading_resources,heading_build,label_lumber"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <!--trade menu group-->
-    <android.support.constraint.Group
-        android:id="@+id/group_trade_menu"
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right_sidebar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:constraint_referenced_ids="ore_want_minus,brick_give_add,grain_give_icon,wood_give_add,sheep_want_minus,ore_give_minus,brick_give_icon,sheep_give_add,wood_want_icon,brick_give_amount,ore_want_icon,wood_give_icon,grain_want_amount,grain_want_minus,sheep_want_add,ore_give_add,wood_give_minus,wood_want_add,ore_want_add,brick_want_minus,grain_give_amount,sheep_want_icon,ore_give_icon,sheep_give_icon,sheep_give_minus,wood_want_minus,grain_give_minus,you_give_text,sheep_want_amount,ore_give_amount,brick_want_amount,sheep_give_amount,brick_give_minus,brick_want_add,grain_give_add,grain_want_add,wood_want_amount,grain_want_icon,wood_give_amount,ore_want_amount,brick_want_icon,menu_header" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
 
+    <Button
+        android:id="@+id/sidebar_button_score"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Score"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintStart_toEndOf="@+id/sidebar_button_menu"
+        app:layout_constraintTop_toTopOf="@+id/sidebar_button_menu" />
 
+    <Button
+        android:id="@+id/sidebar_button_trade"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/trade"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_playername" />
+
+    <Button
+        android:id="@+id/sidebar_button_menu"
+        android:layout_width="75dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/menu"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sidebar_heading_build"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/heading_build"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_menu" />
+
+    <Button
+        android:id="@+id/sidebar_button_road"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/road"
+        android:theme="@android:style/Widget.Material.Button.Borderless"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_build" />
+
+    <Button
+        android:id="@+id/sidebar_button_settlement"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/settlement"
+        android:theme="@android:style/Widget.Material.Button.Borderless"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_road" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/sidebar_button_city"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/city"
+        android:theme="@android:style/Widget.Material.Button.Borderless"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_settlement" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/sidebar_button_devcards"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/developmentCards"
+        android:theme="@android:style/Widget.Material.Button.Borderless"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_city" />
+
+    <TextView
+        android:id="@+id/sidebar_heading_playername"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Player1"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_devcards" />
+
+    <TextView
+        android:id="@+id/sidebar_heading_vp"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="VP: 00"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintStart_toEndOf="@+id/sidebar_heading_playername"
+        app:layout_constraintTop_toTopOf="@+id/sidebar_heading_playername" />
+
+    <Button
+        android:id="@+id/sidebar_button_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/roll"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_trade" />
+
+    <Button
+        android:id="@+id/sidebar_button_endturn"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/endTurn"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_roll" />
+
+    <TextView
+        android:id="@+id/sidebar_heading_resources"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_button_endturn"
+        tools:text="@string/heading_resources" />
+
+    <TextView
+        android:id="@+id/sidebar_label_ore"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/ore"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_resources" />
+
+    <TextView
+        android:id="@+id/sidebar_value_grain"
+        android:layout_width="20dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sidebar_label_grain"
+        app:layout_constraintTop_toTopOf="@+id/sidebar_label_grain" />
+
+    <TextView
+        android:id="@+id/sidebar_value_lumber"
+        android:layout_width="20dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sidebar_label_lumber"
+        app:layout_constraintTop_toTopOf="@+id/sidebar_label_lumber" />
+
+    <TextView
+        android:id="@+id/sidebar_value_ore"
+        android:layout_width="20dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sidebar_label_ore"
+        app:layout_constraintTop_toTopOf="@+id/sidebar_label_ore" />
+
+    <TextView
+        android:id="@+id/sidebar_value_wool"
+        android:layout_width="20dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sidebar_label_wool"
+        app:layout_constraintTop_toTopOf="@+id/sidebar_label_wool" />
+
+    <TextView
+        android:id="@+id/sidebar_value_brick"
+        android:layout_width="20dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:text="00"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/sidebar_label_brick"
+        app:layout_constraintTop_toTopOf="@+id/sidebar_label_brick" />
 
 
     <!-- trade menu END -->
