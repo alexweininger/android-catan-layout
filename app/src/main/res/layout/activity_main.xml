@@ -123,7 +123,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sidebar_label_ore" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guideline_bottom_83"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -131,7 +131,7 @@
 
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline5"
+        android:id="@+id/guideline_right_68"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -139,7 +139,7 @@
 
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline9"
+        android:id="@+id/guideline_right_84"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -147,21 +147,21 @@
 
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
+        android:id="@+id/guideline_middle_40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.4" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline7"
+        android:id="@+id/guideline_left_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.0" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline8"
+        android:id="@+id/guideline_left_20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -169,28 +169,28 @@
 
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline10"
+        android:id="@+id/guideline_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline_middle_54"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5419922" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline13"
+        android:id="@+id/guideline_left_30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.3" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline14"
+        android:id="@+id/guideline_right_100"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -216,7 +216,7 @@
         app:layout_constraintGuide_percent="0.92" />
 
     <TextView
-        android:id="@+id/dropText"
+        android:id="@+id/label_confirm_trade"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
@@ -927,7 +927,7 @@
         android:text="@string/trade"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_playername" />
 
     <Button
@@ -939,7 +939,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/menu"
         android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -955,7 +955,7 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_menu" />
 
     <Button
@@ -968,7 +968,7 @@
         android:text="@string/road"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_build" />
 
     <Button
@@ -982,7 +982,7 @@
         android:text="@string/settlement"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_road" />
 
     <Button
@@ -996,7 +996,7 @@
         android:text="@string/city"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_settlement" />
 
     <Button
@@ -1010,7 +1010,7 @@
         android:text="@string/developmentCards"
         android:theme="@android:style/Widget.Material.Button.Borderless"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_city" />
 
     <TextView
@@ -1024,7 +1024,7 @@
         android:textAlignment="viewStart"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_devcards" />
 
     <TextView
@@ -1050,7 +1050,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/roll"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_trade" />
 
     <Button
@@ -1061,7 +1061,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/endTurn"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_roll" />
 
     <TextView
@@ -1077,7 +1077,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right_sidebar"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_button_endturn"
         tools:text="@string/heading_resources" />
 
@@ -1090,7 +1090,7 @@
         android:textAlignment="textStart"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_0"
         app:layout_constraintTop_toBottomOf="@+id/sidebar_heading_resources" />
 
     <TextView
