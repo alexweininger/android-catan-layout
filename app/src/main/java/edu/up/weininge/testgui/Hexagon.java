@@ -22,7 +22,6 @@ public class Hexagon extends boardSurfaceView {
     protected Path hexagonPath;
     protected int[][] points;
 
-
     protected boolean isRobber;
 
     public Hexagon(Context context, int x, int y, int size, boolean isRobber) {
@@ -54,9 +53,9 @@ public class Hexagon extends boardSurfaceView {
         paint.setColor(this.color);
         paint.setStyle(Paint.Style.FILL);
 
+        Random random = new Random();
+
         points = calculateHexagonPoints(this.x, this.y, this.size);
-
-
 
         Path hexagonPath = createHexagonPath(points);
         canvas.drawPath(hexagonPath, paint);
@@ -67,7 +66,6 @@ public class Hexagon extends boardSurfaceView {
 
         blackFont.setTextSize(50);
 
-        canvas.drawText("1", points[3][0] + this.size/2, points[3][1] - this.size/2, blackFont);
 
         Paint robberPaint = new Paint();
         robberPaint.setColor(Color.MAGENTA);
@@ -76,16 +74,12 @@ public class Hexagon extends boardSurfaceView {
         if(this.isRobber) {
             canvas.drawCircle(points[3][0] + this.size, points[3][1] - this.size/2, 25, robberPaint);
             Log.d("user", "hexagon robber");
+        } else {
+            canvas.drawText("" + (random.nextInt(11) + 1), points[3][0] + this.size/2, points[3][1] - this.size/2, blackFont);
         }
-
-       // canvas.drawRect(points[3][0], points[3][1], points[0][0], points[0][1], newPaint);
-
-        Random random = new Random();
-
 
         Road road = new Road(points, random.nextInt(4));
         road.drawRoad(canvas);
-
     }
 
     protected int[][] calculateHexagonPoints(int x, int y, int size) {

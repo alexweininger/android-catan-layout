@@ -54,9 +54,5 @@ public class boardSurfaceView extends SurfaceView {
         ports.add(new Ports(270, 1210));
         ports.add(new Ports(697, 1400));
         ports.add(new Ports(1277, 1400));
-
-
     }
-
-
 }
