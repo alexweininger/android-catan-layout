@@ -34,10 +34,11 @@ public class MainActivity extends Activity {
 //        Button buildMenuButton
 
         board.createHexagons();
-
+        board.createPorts();
 
 
         board.draw(canvas);
+
 
 
 

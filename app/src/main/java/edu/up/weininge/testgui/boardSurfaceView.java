@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class boardSurfaceView extends SurfaceView {
 
     ArrayList<Hexagon> hexagons = new ArrayList<>();
+    ArrayList<Ports> ports = new ArrayList<>();
 
     int size;
     HexagonGrid grid;
@@ -33,8 +34,28 @@ public class boardSurfaceView extends SurfaceView {
         grid = new HexagonGrid(this.getContext(), 100, 150, 150, 40);
     }
 
-
     public void onDraw(Canvas canvas) {
             grid.drawGrid(canvas);
+            for(int i = 0; i < 9; i++){
+                Log.d("user1", "" + i);
+                ports.get(i).drawPort(canvas);
+            }
     }
+
+    public void createPorts(){
+
+        ports.add(new Ports(697, 50));
+        ports.add(new Ports(1277, 50));
+        ports.add(new Ports(200, 150));
+        ports.add(new Ports(1350, 365));
+        ports.add(new Ports(1350, 815));
+        ports.add(new Ports(80, 590));
+        ports.add(new Ports(200, 1210));
+        ports.add(new Ports(697, 1400));
+        ports.add(new Ports(1277, 1400));
+
+
+    }
+
+
 }
