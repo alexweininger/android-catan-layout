@@ -235,8 +235,8 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/cancelButton"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="97dp"
         android:layout_height="39dp"
         android:layout_marginBottom="12dp"
@@ -249,8 +249,8 @@
         app:layout_constraintVertical_bias="0.6" />
 
     <Button
-        style="@style/Widget.AppCompat.Button"
         android:id="@+id/okButton"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="97dp"
         android:layout_height="39dp"
         android:layout_marginBottom="8dp"
