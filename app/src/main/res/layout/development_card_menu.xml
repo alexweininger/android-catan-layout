@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="432dp">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_middle_dc_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="512dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_wall_dc_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1.0" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_bottom_border_dc_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.76" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_left_dc_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <Spinner
+            android:id="@+id/development_Card_Spinner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_bottom_border_dc_layout"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_left_dc_border"
+            app:layout_constraintStart_toStartOf="@+id/guideline_middle_dc_layout"
+            app:layout_constraintTop_toTopOf="@+id/development_Card_Name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/development_Card_Name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="DC_Name"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/development_Card_Info"
+            android:layout_width="0dp"
+            android:layout_height="228dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border"
+            app:layout_constraintTop_toBottomOf="@+id/development_Card_Name" />
+
+        <Button
+            android:id="@+id/use_Card"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Button"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_wall_dc_info"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left_dc_border"
+            app:layout_constraintTop_toBottomOf="@+id/development_Card_Info" />
+
+    </android.support.constraint.ConstraintLayout>
