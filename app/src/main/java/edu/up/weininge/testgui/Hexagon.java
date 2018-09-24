@@ -22,19 +22,7 @@ public class Hexagon extends boardSurfaceView {
     protected Path hexagonPath;
     protected int[][] points;
 
-    protected boolean isRobber;
-
-    public Hexagon(Context context, int x, int y, int size, boolean isRobber) {
-        super(context);
-        setWillNotDraw(false);
-
-        this.x = x;
-        this.y = y;
-        this.size = size;
-        this.color = Color.CYAN;
-
-        this.isRobber = isRobber; // ROBBER IS BAD CODE PLS FIX
-    }
+    protected boolean isRobber; // TODO redo
 
     public Hexagon(Context context, int x, int y, int size, int color, boolean isRobber) {
         super(context);
@@ -45,9 +33,10 @@ public class Hexagon extends boardSurfaceView {
         this.size = size;
         this.color = color;
 
-        this.isRobber = isRobber; // BAD CODE
+        this.isRobber = isRobber; // TODO BAD CODE
     }
 
+    // TODO look over and determine if needs to be redone
     protected void drawHexagon(Canvas canvas) {
         Paint paint = new Paint();
         paint.setColor(this.color);
@@ -82,6 +71,12 @@ public class Hexagon extends boardSurfaceView {
         road.drawRoad(canvas);
     }
 
+    /** calculateHexagonPoints() generates an array of points (x, y) for the corners of a hexagon
+     * @param x - x position
+     * @param y - y position
+     * @param size - size, measured from center to a corner
+     * @return int[][]
+     */
     protected int[][] calculateHexagonPoints(int x, int y, int size) {
         int[][] points = new int[6][2];
         double angle_deg, angle_rad;
@@ -102,6 +97,12 @@ public class Hexagon extends boardSurfaceView {
         return points;
     }
 
+    //
+
+	/** createHexagonPath() creates a Path object from given hexagon corner x and y values
+	 * @param corners - 2d array of x and y cords for the corners
+	 * @return Path
+	 */
     protected Path createHexagonPath(int[][] corners) {
         hexagonPath = new Path();
         hexagonPath.moveTo(corners[0][0], corners[0][1]);

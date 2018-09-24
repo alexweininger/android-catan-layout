@@ -3,8 +3,12 @@ package edu.up.weininge.testgui;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 
+/** TODO this entire class needs to be redone
+ *
+ *  we need to sit and think out how to approach implementing roads
+ *  9/23 Alex
+ */
 public class Road {
 
     protected int[][] points;
