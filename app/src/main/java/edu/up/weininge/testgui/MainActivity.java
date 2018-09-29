@@ -60,6 +60,6 @@ public class MainActivity extends Activity {
         developmentChoices.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         developmentSpinner.setAdapter(developmentChoices);
 
-        //yeetus 
+        //yeetus
     }
 }
