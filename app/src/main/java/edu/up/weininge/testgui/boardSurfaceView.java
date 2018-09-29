@@ -14,13 +14,13 @@ import java.util.ArrayList;
 
 public class boardSurfaceView extends SurfaceView {
 
-    ArrayList<Hexagon> hexagons = new ArrayList<>();
     ArrayList<Ports> ports = new ArrayList<>();
     ArrayList<House> houses = new ArrayList<>();
 
     int size;
     HexagonGrid grid;
 
+    // constructors
     public boardSurfaceView(Context context) {
         super(context);
         setWillNotDraw(false);
@@ -31,8 +31,10 @@ public class boardSurfaceView extends SurfaceView {
         setWillNotDraw(false);
     }
 
+    // TODO Alex
     public void createHexagons() {
-        grid = new HexagonGrid(this.getContext(), 100, 200, 145, 40);
+
+    	grid = new HexagonGrid(this.getContext(), 100, 200, 145, 40);
     }
 
     public void onDraw(Canvas canvas) {
@@ -49,6 +51,7 @@ public class boardSurfaceView extends SurfaceView {
         }
     }
 
+    // TODO Niraj
     public void createPorts(){
 
         ports.add(new Ports(697, 50));
@@ -62,6 +65,7 @@ public class boardSurfaceView extends SurfaceView {
         ports.add(new Ports(1277, 1400));
     }
 
+    // TODO Niraj
     public void createHouses(){
 
         Log.d("house", "yes");

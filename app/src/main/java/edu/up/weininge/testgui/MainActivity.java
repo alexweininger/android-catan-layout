@@ -18,6 +18,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
+    // TODO dev branch
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -46,6 +48,8 @@ public class MainActivity extends Activity {
 
         // draw the board of hexagons and ports on the canvas
         board.createHexagons();
+
+        // TODO
         board.createPorts();
         board.createHouses();
 
@@ -60,6 +64,5 @@ public class MainActivity extends Activity {
         developmentChoices.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         developmentSpinner.setAdapter(developmentChoices);
 
-        //yeetus
     }
 }

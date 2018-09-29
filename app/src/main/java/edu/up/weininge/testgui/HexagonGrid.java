@@ -21,6 +21,7 @@ public class HexagonGrid extends boardSurfaceView {
 
     protected int[] robberLocation = {2, 2};
 
+    // TODO roads
     ArrayList<Road> roads = new ArrayList<Road>();
 
     ArrayList<Hexagon> hexagons = new ArrayList<Hexagon>();
@@ -40,29 +41,32 @@ public class HexagonGrid extends boardSurfaceView {
 
     }
 
-    public HexagonGrid (Context context, AttributeSet attrs, int x, int y, int size, int margin) {
-        super(context, attrs);
-        setWillNotDraw(false);
+	// TODO do we need this constructor?
+	public HexagonGrid (Context context, AttributeSet attrs, int x, int y, int size, int margin) {
+		super(context, attrs);
+		setWillNotDraw(false);
 
-        this.x = x;
-        this.y = y;
-        this.height = size * 2;
-        this.width = size * (int) Math.sqrt(3);
-        this.margin = margin;
+		this.x = x;
+		this.y = y;
+		this.height = size * 2;
+		this.width = size * (int) Math.sqrt(3);
+		this.margin = margin;
 
-        getHexagons(x, y, size);
-    }
+		getHexagons(x, y, size);
+	}
 
     protected void drawGrid(Canvas canvas) {
         for(Hexagon h: hexagons) {
             h.drawHexagon(canvas);
         }
 
+        // TODO roads
         for(Road r: roads) {
             r.drawRoad(canvas);
         }
     }
 
+    // method that generates the individual hexagon objects from the Hexagon class
     protected void getHexagons(int x, int y, int size) {
 
         hexagons = new ArrayList<Hexagon>();
@@ -74,6 +78,7 @@ public class HexagonGrid extends boardSurfaceView {
         for(int i = 0; i < 5; i++) {
             for(int j = 0; j < hexagonsInEachRow[i]; j++) {
 
+            	// TODO robber should be redone
                 boolean isRobber = false;
                 if(robberLocation[0] == i && robberLocation[1] == j) {
                     isRobber = true;
@@ -95,6 +100,8 @@ public class HexagonGrid extends boardSurfaceView {
         }
     }
 
+    // getTile method generated random tiles to fill the grid
+	// TODO needs to be redone
     protected int getTile(int i, int j) {
 
         if(i == 2 && j == 2) {
