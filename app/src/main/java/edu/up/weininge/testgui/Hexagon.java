@@ -49,6 +49,7 @@ public class Hexagon extends boardSurfaceView {
         Path hexagonPath = createHexagonPath(points);
         canvas.drawPath(hexagonPath, paint);
 
+        // TODO random from selection numbers on each hexagon DANIEL
         Paint blackFont = new Paint();
         blackFont.setColor(Color.BLACK);
         blackFont.setStyle(Paint.Style.FILL);
@@ -96,8 +97,6 @@ public class Hexagon extends boardSurfaceView {
         this.points = points;
         return points;
     }
-
-    //
 
 	/** createHexagonPath() creates a Path object from given hexagon corner x and y values
 	 * @param corners - 2d array of x and y cords for the corners

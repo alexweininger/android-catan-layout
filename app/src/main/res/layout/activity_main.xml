@@ -51,7 +51,7 @@
         android:id="@+id/group_scoreboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:constraint_referenced_ids="Player1_Name,Player1_Score,Player2_Score,victory_Points,Player4_Name,Player3_Name,Player2_Name,Player3_Score,Player4_Score" />
 
     <!--dev card group-->
@@ -59,7 +59,7 @@
         android:id="@+id/group_development_card_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:constraint_referenced_ids="development_Card_Name,development_Card_Info,use_Card,development_Card_Spinner" />
 
     <!-- build menu group -->
@@ -67,7 +67,7 @@
         android:id="@+id/group_build_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         app:constraint_referenced_ids="dropText,cancelButton,okButton,label_confirm_trade" />
 
 
@@ -217,11 +217,10 @@
 
     <TextView
         android:id="@+id/label_confirm_trade"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="416dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="end|center"
@@ -315,6 +314,7 @@
         android:layout_marginTop="8dp"
         android:alpha="255"
         android:spinnerMode="dropdown"
+        android:theme="@android:style/Widget.Material.Spinner.Underlined"
         app:layout_constraintStart_toStartOf="@+id/use_Card"
         app:layout_constraintTop_toBottomOf="@+id/use_Card" />
 
