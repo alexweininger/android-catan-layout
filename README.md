@@ -1,4 +1,7 @@
 # android-catan
+
+Follow @alexweininger on github
+
 Settlers of Catan on Android
 
 Please check the issues and projects section and use / add / update the parts that you are working on.
