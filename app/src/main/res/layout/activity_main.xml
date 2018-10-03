@@ -51,7 +51,7 @@
         android:id="@+id/group_scoreboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:constraint_referenced_ids="Player1_Name,Player1_Score,Player2_Score,victory_Points,Player4_Name,Player3_Name,Player2_Name,Player3_Score,Player4_Score" />
 
     <!--dev card group-->
@@ -67,7 +67,7 @@
         android:id="@+id/group_build_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         app:constraint_referenced_ids="dropText,cancelButton,okButton,label_confirm_trade" />
 
 
@@ -217,11 +217,10 @@
 
     <TextView
         android:id="@+id/label_confirm_trade"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="416dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="end|center"
@@ -310,11 +309,14 @@
 
     <Spinner
         android:id="@+id/development_Card_Spinner"
-        android:layout_width="200dp"
+        style="@android:style/Widget.Material.DropDownItem.Spinner"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:alpha="255"
         android:spinnerMode="dropdown"
+        android:theme="@android:style/Widget.DeviceDefault.Light.Spinner"
+        app:layout_constraintEnd_toEndOf="@+id/use_Card"
         app:layout_constraintStart_toStartOf="@+id/use_Card"
         app:layout_constraintTop_toBottomOf="@+id/use_Card" />
 
@@ -1168,6 +1170,17 @@
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/sidebar_label_brick"
         app:layout_constraintTop_toTopOf="@+id/sidebar_label_brick" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+        android:text="Build Development"
+        app:layout_constraintEnd_toEndOf="@+id/development_Card_Spinner"
+        app:layout_constraintStart_toStartOf="@+id/development_Card_Spinner"
+        app:layout_constraintTop_toBottomOf="@+id/development_Card_Spinner" />
 
 
     <!-- trade menu END -->
