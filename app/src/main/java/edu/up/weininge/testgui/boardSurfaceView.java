@@ -50,29 +50,4 @@ public class boardSurfaceView extends SurfaceView {
             houses.get(j).drawHouse(canvas);
         }
     }
-
-    // TODO Niraj
-    public void createPorts(){
-
-        ports.add(new Ports(697, 50));
-        ports.add(new Ports(1277, 50));
-        ports.add(new Ports(230, 260));
-        ports.add(new Ports(1450, 375));
-        ports.add(new Ports(1450, 945));
-        ports.add(new Ports(70, 650));
-        ports.add(new Ports(270, 1210));
-        ports.add(new Ports(697, 1400));
-        ports.add(new Ports(1277, 1400));
-    }
-
-    // TODO Niraj
-    public void createHouses(){
-
-        Log.d("house", "yes");
-
-        houses.add(new House(661, 272));
-        houses.add(new House(1098, 529));
-        houses.add(new House(516, 1043, Color.MAGENTA));
-        houses.add(new House(661, 1300, Color.YELLOW));
-    }
 }
